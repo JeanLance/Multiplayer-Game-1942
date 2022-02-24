@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+	<title>1942</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="scripts/script.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<!-- Game Lobby -->
+	<span id="game-lobby">
+		<h1>1942 Multiplayer</h1>
+		<h3>Instructions:</h3>
+		<p>Use <span>Arrow Keys (← ↑ ↓ →)</span> to control your plane.</p>
+		<p>Press <span>Spacebar</span> to shoot bullets.</p>
+		<h5>A <span>minimum of (1)</span> players are required to start and a <span>maximum of (2)</span> players are allowed.</h5>
+		<div id="players-list">
+			<h2>Players (<span id="player-count">0</span>/2)</h2>
+			<!-- Append Players Here -->
+		</div>
+	</span>
+
+	<!-- Game Wrapper -->
+	<div class="game-wrapper">
+		<div id='game-map'>
+			<div id='enemies'></div>
+			<div id='bullets'></div>
+			<div id='explosions'></div>	
+		</div>
+		<div id="gameboard">
+			<div class="players-tab">
+				<h3>Players</h3>
+				<table>
+					<thead>
+						<th>Name</th>
+						<th>Life</th>
+					</thead>
+					<tbody id="players-list-tab">
+					</tbody>
+				</table>
+			</div>
+			<div class="scoreboard">
+				<h3>Scores</h3>
+				<span id="players-score-tab">
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

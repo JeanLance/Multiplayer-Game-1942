@@ -1,0 +1,34 @@
+<html>
+<head></head>
+<body>
+    
+</body>
+<script>
+    let keysPressed = {};
+
+    document.addEventListener('keydown', (event) => {
+        keysPressed[event.code] = true;
+        console.log(event.code);
+        let arr = ['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft'];
+
+    if (keysPressed['ArrowDown'] && event.code == 'Space') {
+        console.log(event.code);
+        console.log(keysPressed);
+    }
+    });
+
+    document.addEventListener('keyup', (event) => {
+        delete keysPressed[event.key];
+        if (keysPressed['ArrowDown']) {
+            console.log('qweq');
+        }
+        else {
+            console.log('wow');
+        }
+    });
+
+    // document.onkeydown = (event) => {
+    //     console.log(event.code);
+    // }
+</script>
+</html>
